@@ -13,15 +13,15 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jonas
+ * @author Jameeyah
  */
 public class Movies {
-    //TMBD API Connection
-    private  static final TmdbApi CONNECTION = new TmdbApi("bc6da920763d6d23601c2892db37f97a");
+   
+    private  static final TmdbApi CONNECTION = new TmdbApi("2cf6a1a6e991657d6a8b106248bf5732");
     
     private static final String LANGUAGE = "en-US";
     
-    //Return the list of currently playing movies
+    
     
     public ArrayList<MovieDb> getMovies()
     {  
@@ -31,7 +31,7 @@ public class Movies {
         return (ArrayList<MovieDb>) result.getResults();
     }
       
-    //get Trailers
+   
     public ArrayList<Video> getVideos(int movieId)
     {
         TmdbMovies movies = new TmdbMovies(CONNECTION);

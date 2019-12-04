@@ -2,7 +2,6 @@ package com.mycompany.movies;
 
 import com.jfoenix.controls.JFXButton;
 import com.mycompany.movies.models.Movies;
-import static info.movito.themoviedbapi.TmdbMovies.MovieMethod.videos;
 import info.movito.themoviedbapi.model.MovieDb;
 import info.movito.themoviedbapi.model.Video;
 import java.net.URL;
@@ -34,11 +33,10 @@ public class FXMLController implements Initializable {
     //We are adding this to change screens and information.
     private AnchorPane scene;
     
-    //This will pull images off the internet 
+ 
     private static final String IMAGE_URL = "http://image.tmdb.org/t/p/w342/";
     final int SPACING = 15;
-    
-    //padding variables
+     //padding variables
     private static final Insets PAD_10 = new Insets(10);
     private static final Insets PAD_15 = new Insets(15);
     
@@ -67,6 +65,7 @@ public class FXMLController implements Initializable {
         
         //Temporay variables used as interaters
         int i = 0, col =0, row=0;
+        
         for(final MovieDb movie : movies)
         {
             Image image = new Image(IMAGE_URL + movie.getPosterPath());
@@ -74,7 +73,9 @@ public class FXMLController implements Initializable {
             ImageView imView = new ImageView(image);
             
             final int current = i;
+            
             imView.setOnMouseClicked(new EventHandler<MouseEvent>(){
+               
                 @Override
                 public void handle(MouseEvent event) {
                     loadDetailScene(current);
