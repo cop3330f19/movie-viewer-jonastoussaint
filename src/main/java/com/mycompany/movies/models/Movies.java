@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class Movies {
    
-    private  static final TmdbApi CONNECTION = new TmdbApi("2cf6a1a6e991657d6a8b106248bf5732");
+    private  static final TmdbApi CONNECTION = new TmdbApi("bc6da920763d6d23601c2892db37f97a");
     
     private static final String LANGUAGE = "en-US";
     
