@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jameeyah
+ * @author Jonas
  */
 public class Movies {
    
